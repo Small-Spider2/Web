@@ -1,0 +1,137 @@
+@font-face {
+    font-family: Roboto-Medium;
+    font-weight: 500;
+    font-style: normal;
+    src: url("/fonts/Roboto/Roboto-Medium.ttf") format("trutype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500; 
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;/*убираємо стандартні відступи*/
+}
+
+.wrapper{
+    width: 100%; 
+    max-width: 1280px;/*розмір області*/
+    margin: 0 auto;/*центруємо контейнер*/
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: bold; 
+}
+.wrapper img{
+    height: auto;
+    object-fit: cover; /* Зберігаємо пропорції, обрізаючи зображення, якщо воно не поміщається */
+    margin: 0 auto; /* Відступи між зображеннями */
+
+}
+.top-text {
+    display: flex;
+    justify-content: center; /* Центруємо зображення */
+    align-items: center; /* Вирівнюємо по вертикалі */
+    gap: 100px; /* Відстань між зображеннями */
+    margin: 0 auto; /* Центруємо галерею на сторінці */
+    color: rgb(32, 162, 149);
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+
+.image-gallery img {
+    max-width: 200px; /* Максимальна ширина зображення */
+    height: auto; 
+    display: block;
+}
+.full-with-img{
+    width: 100%;
+    max-width: 1980px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 20px;
+ 
+    justify-content:center;
+    align-items: center;
+   
+
+ 
+}
+.fon-text{
+    background-color: rgb(238, 238, 238); 
+
+}
+.custom-spacing {
+     /* Контур навколо зображення */
+    margin-top: 100px; /* Відстань від верхнього краю */
+    margin-bottom: 100px; /* Відстань від нижнього краю */
+    margin-right: 150px; /* Відстань від правого краю */
+    margin-left: 80px; /* Відстань від лівого краю */
+    /* Фоновий колір (можна змінити за потреби) */
+    padding: 20px; /* Додатковий внутрішній відступ (можна налаштувати) */
+}
+
+
+
+
+.green-button{
+background-color: rgb(32, 162, 149);
+    color: aliceblue;
+    padding: 15px 30px; /* Внутрішні відступи для більшої кнопки */
+    border: none; /* Видаляємо обрамлення */
+    text-align: center; /* Вирівнюємо текст по центру */
+    display: inline-block; /* Зберігаємо кнопковий вигляд */
+      cursor: pointer; /* Зміна курсора при наведенні */
+      border-radius: 5px; /* Злегка заокруглюємо кути */
+      transition: background-color 1s ease; /* Анімація при наведенні */
+}
+
+.green-button:hover{
+background-color: darkgreen;
+}
+
+.footer{
+    width: 100%; 
+    max-width: 1280px;/*розмір області*/
+    margin: 0 100px;/*центруємо контейнер*/
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+   justify-content: space-between;
+
+}
+.left-text{
+    text-align: left;
+    width: 50%;
+
+}
+
+.right-text{
+    text-align: right;
+    width: 50%;
+}
+
+#header{
+    margin-top: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+.right {
+    text-align: right;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
