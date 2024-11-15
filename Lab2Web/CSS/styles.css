@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+  
+    padding: 0;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+ 
+}
+
+.logo{
+    padding: 20px 0;
+text-align: left;
+width: 100%; /* Забезпечує, що елемент займає всю ширину сторінки */
+display: inline-block;
+}
+.logo a{
+    font-size: 60px;
+    text-decoration: none;
+    color: black; /* "Ra" чорний */
+    display: inline-block;
+}
+
+.logo a .highlight{
+    color: rgb(39, 156, 203); /* "mda.js" синій */
+}
+
+.top-menu{
+    background-color: rgb(28, 54, 70);
+    text-align: center;
+    display: flex; /* Використовуємо flex для вирівнювання */
+    justify-content: center; /* Центрування посилань по горизонталі */
+    padding: 0; /* Скидання відступів */
+    height: 50px; /* Встановлюємо висоту меню (можна налаштувати) */
+    
+}
+.top-menu a{
+    color: white;
+    text-decoration: none;
+    padding: 0px 80px; /* Внутрішні відступи для посилань */
+    /* Змінюємо margin на 0, щоб уникнути пробілів */
+    margin: 0; /* Відстань між посиланнями */
+    transition: background-color 0.5s ease, color 0.8s ease; /* Плавний перехід */
+    display: flex; /* Робимо посилання flex-контейнерами */
+    align-items: center; /* Центруємо текст по вертикалі */
+    font-size: 18px;
+}
+.top-menu a:hover{
+    background-color: rgb(7, 28, 43);
+  
+}
+.main-content{
+    display: flex;
+}
+.sidebar { 
+    background-color: white; /* Білий фон для бокової панелі */
+    border: 1px solid rgb(149, 149, 149); /* Чорна рамка */
+    width: 340px; /* Ширина бокової панелі (можна налаштувати) */
+    box-sizing: border-box; /* Включає рамки і відступи в загальну ширину */
+height: 323px;
+display: inline-block;
+}
+
+
+/* Стилі для списку у боковій панелі */
+.sidebar ul {
+    list-style-type: none; /* Вимкнення маркерів списку */
+    padding: 0; /* Скидання відступів */
+    margin: 0; /* Скидання відступів */
+}
+
+
+.sidebar li {
+    margin-bottom: 10px; /* Відстань між пунктами списку */
+    width: 100%; /* Задаємо ширину 100% для кожного пункту */
+}
+
+.sidebar a {
+    text-decoration: none; /* Видалення підкреслення */
+    color: black; /* Колір тексту */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Плавний перехід */
+    display: block; /* Кожне посилання займає всю ширину пункту списку */
+    font-size: 20px;
+    padding: 18px 20px;
+    display: inline-block;
+}
+
+.sidebar ul li.active, .sidebar ul li:hover {
+    background-color: transparent;
+    border-left: none;
+    background-color: #efefef;
+}
+
+/* Анімація вилітання */
+.sidebar ul li:hover a {
+    position: relative;
+    transform: translateX(30px); /* Зсув елемента вправо при наведенні */
+    transition-delay: 0.03s; /* Затримка перед анімацією */
+}
+
+
+
+.content{
+    width: 70%; /* Ширина контенту */
+    margin-left: 50px;
+}
+.image-frame {
+    border: 1px solid #ccc; /* Додано рамку */
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%; /* Займає всю ширину контенту */
+    max-width: 1000px; /* Максимальна ширина */
+    height: 500px; /* Висота блоку (можна налаштувати відповідно до ваших потреб) */
+    overflow: hidden; /* Сховати переповнені частини */
+    position: relative; /* Позиціонування для абсолютного позиціювання зображення */
+    padding: 20px; /* Внутрішні відступи для відстані до країв блоку */
+    box-sizing: border-box; /* Включає відступи в загальну ширину */
+}
+
+.image-frame img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: none; /* Вимкнення обмеження ширини */
+  height: calc(100% - 90px); /* Заповнення висоти з відступом */
+  width: auto; /* Автоматичне розширення ширини */
+   display: inline-block;
+}
+footer {
+    background-color: #e0e0e0;
+    margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+.bottom-menu {
+   float: left;
+}
+
+.bottom-menu ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.bottom-menu ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.bottom-menu ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.copyright {
+    text-align: right;
+    color: #555;
+    font-size: 24px;
+    margin-right: 30px;
+}
