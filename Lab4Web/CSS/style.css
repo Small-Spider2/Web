@@ -1,0 +1,259 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: Quicksand-Medium;
+    font-weight: 500;
+    font-style: normal;
+    src: url("/font/Quicksand-Medium.ttf") format("trutype");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background: url("img/background.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Quicksand-Medium",sans-serif;
+}
+
+/* Top Navigation Menu Styling */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+   
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav-left .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #478a61; /* Green color for the logo */
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Відстань між зображеннями та текстом */
+}
+
+
+ .icon {
+    width: 26px; /* Розмір іконки */
+    height: 24px;
+   
+    background-image: url("img/sprite.png"); /* Файл спрайта */
+    background-size: 80px 48px; /* Задайте повний розмір спрайта */
+    display: inline-block;
+   
+    transition: background-image 0.3s; /* Плавний перехід */
+}
+
+.icon-calendar {
+ 
+    background-position: 0 -24px; 
+}
+
+.icon-forum {
+   
+    background-position: -28px -24px; /* Друга іконка */
+}
+.icon-journey {
+   
+    background-position: -54px -24px;/* Третя іконка */
+}
+
+/* Зелені іконки при наведенні */
+.icon-calendar:hover {
+    background-position: 0 0; /* Перша іконка зелена */
+}
+.icon-forum:hover {
+    background-position: -28px 0; /* Друга іконка зелена */
+}
+.icon-journey:hover {
+    background-position: -54px 0;  /* Третя іконка зелена */
+}
+
+.nav-right .welcome-message {
+    color: #fff;
+    font-size: 14px;
+}
+
+.nav-right .welcome-message a {
+    color: #499865; /* Green color for links */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.nav-right .welcome-message a:hover {
+    text-decoration: underline;
+}
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+
+/* Main box for sign-up form */
+.signup-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Header section with Sign Up title and Log In link */
+.signup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.signup-header h2 {
+    margin: 0;
+}
+
+.signup-header .login-link {
+    color: #478f63;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.signup-header .login-link:hover {
+    text-decoration: underline;
+}
+
+/* Social login buttons */
+.social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.facebook {
+    background-color: #3b5998;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center; /* Центруємо зображення */
+    align-items: center; /* Вирівнюємо по вертикалі */
+    gap: 50px; /* Відстань між зображеннями */
+}
+
+.google {
+    background-color: #db4437;
+    display: flex;
+    justify-content: center; /* Центруємо зображення */
+    align-items: center; /* Вирівнюємо по вертикалі */
+    gap: 50px; /* Відстань між зображеннями */
+    
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Form styling */
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.terms {
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Додаємо курсор */
+
+}
+
+.terms input[type="checkbox"] {
+    display: none; /* Сховати стандартний чекбокс */
+}
+
+.custom-checkbox {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ccc; /* Колір рамки */
+    border-radius: 3px; /* Кут рамки */
+    margin-right: 8px; /* Відстань між чекбоксом і текстом */
+    position: relative; /* Для абсолютного позиціювання галочки */
+
+}
+
+.terms input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: #ffffff; /* Колір фону при натисканні */
+    border-color: #ccc; /* Колір рамки при натисканні */
+}
+
+.terms input[type="checkbox"]:checked + .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    left: 4px; /* Вирівнювання галочки */
+    top: 0;
+    width: 4px;
+    height: 8px;
+    border: solid #45a167; /* Колір галочки */
+    border-width: 0 2px 2px 0; /* Створюємо форму галочки */
+    transform: rotate(45deg); /* Повертаємо галочку */
+}
+.terms a {
+    color: #45a167; /* Зелений колір для посилання */
+    text-decoration: none; /* Прибрати підкреслення */
+margin-left: 4px;
+}
+
+.terms a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+/* Create Account button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #45a167;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #3d8d5a;
+}
+.color-sign{
+    color: #504f4f;
+}
